@@ -530,18 +530,22 @@
   <div class="container forms-grid">
     <div class="panel reveal">
       <h3>Book a Session</h3>
-      <p class="sub">Tell me a little about your child and I'll confirm a time within one business day.</p>
+      <p class="sub">Tell me a little about your child and I'll get back to you shortly to confirm a time.</p>
       <form id="bookForm" action="https://formspree.io/f/xrenkgzd" method="POST">
         <input type="hidden" name="form_type" value="Book a Session">
         <div class="field-row">
           <div class="field">
-            <label for="b-name">Parent / Student Name</label>
-            <input id="b-name" name="name" type="text" required>
+            <label for="b-parent-name">Parent Name</label>
+            <input id="b-parent-name" name="parent_name" type="text" required>
           </div>
           <div class="field">
-            <label for="b-phone">Phone Number</label>
-            <input id="b-phone" name="phone" type="tel" placeholder="9XXX XXXX" required>
+            <label for="b-child-name">Child's Name</label>
+            <input id="b-child-name" name="child_name" type="text" required>
           </div>
+        </div>
+        <div class="field">
+          <label for="b-phone">Phone Number</label>
+          <input id="b-phone" name="phone" type="tel" placeholder="9XXX XXXX" required>
         </div>
         <div class="field">
           <label for="b-email">Email (optional)</label>
@@ -585,7 +589,7 @@
           <textarea id="b-notes" name="notes" rows="3" placeholder="Anything I should know before the first session?"></textarea>
         </div>
         <button type="submit" class="btn btn-solid" style="border-color:var(--navy); background:var(--navy); color:var(--cream);">Request a Session</button>
-        <div class="form-msg" id="bookMsg" data-success="Thank you — your request has been noted. I'll be in touch within one business day to confirm a time.">Thank you — your request has been noted. I'll be in touch within one business day to confirm a time.</div>
+        <div class="form-msg" id="bookMsg" data-success="Thank you — your request has been noted. I'll get back to you shortly to confirm a time.">Thank you — your request has been noted. I'll get back to you shortly to confirm a time.</div>
       </form>
     </div>
 
@@ -604,15 +608,10 @@
             <input id="c-child-name" name="child_name" type="text" required>
           </div>
         </div>
-        <div class="field-row">
-          <div class="field">
-            <label for="c-email">Email</label>
-            <input id="c-email" name="email" type="email" required>
-          </div>
-          <div class="field">
-            <label for="c-phone">Phone Number (optional)</label>
-            <input id="c-phone" name="phone" type="tel" placeholder="9XXX XXXX">
-          </div>
+        <div class="field">
+          <label for="c-phone">Phone Number</label>
+          <input id="c-phone" name="phone" type="tel" placeholder="9XXX XXXX" required>
+          <small style="display:block; margin-top:6px; color:#777; font-size:0.8rem;">I'll liaise with you over WhatsApp.</small>
         </div>
         <div class="field">
           <label for="c-message">Message</label>
